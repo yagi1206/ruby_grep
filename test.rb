@@ -22,5 +22,12 @@ else
 end
 
 contents = File.read("#{arg}")
+contents.lines(";")  { | line1 | line1.lines("{") { | line2 | line2.lines("}") { | line3 | 
+      p line3.gsub(/(\n)/,"")
+}}}
 
-contents.lines(";") { |line| p line.chomp }  
+#
+#def multi_separator_lines( *args )
+#  num = args.length
+#  line[num]
+  
