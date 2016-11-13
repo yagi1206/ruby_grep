@@ -21,8 +21,6 @@ else
   exit
 end
 
-
 contents = File.read("#{arg}")
 
-print contents
-
+contents.lines(";") { |line| p line.chomp }  
